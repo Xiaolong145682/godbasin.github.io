@@ -422,11 +422,19 @@ var jiathis_config = {data_track_clickback:'true'};
 
     <!-- 配置中启用多说时，导入相应代码 -->
     
-        <!-- UY BEGIN -->
-        <div id="uyan_frame"></div>
-        <script type="text/javascript" src="//v2.uyan.cc/code/uyan.js?uid=2134021"></script>
-        <!-- UY END -->
+        <!--PC版-->
+        <div style="padding: 1.5em 4%;">
+            <div id="SOHUCS" sid="comments" styles="padding: 1.5em 4%;"></div>
+        </div>
+        <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+        <script type="text/javascript">
+            window.changyan.api.config({
+                appid: 'cyucuwQ9I',
+                conf: 'prod_33202c62db8445bb6729cc5b4eb8a685'
+            });
+        </script>
     
+
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
