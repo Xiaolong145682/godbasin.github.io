@@ -203,23 +203,24 @@ var jiathis_config = {data_track_clickback:'true'};
 
     <!-- 配置中启用多说时，导入相应代码 -->
     
-        <div style="padding: 1.5em 4%;">
-            <div id="gitment-container"></div>
+        <!-- 来必力City版安装代码 -->
+        <div id="lv-container" data-id="city" data-uid="MTAyMC80Mzk0Mi8yMDQ3OA==">
+            <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+            </script>
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
         </div>
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-        <script>
-            var gitment = new Gitment({
-            id: '2017/07/23/heap-sort/index.html', // 可选。默认为 location.href
-            owner: 'godbasin',
-            repo: 'gitment-comments',
-            oauth: {
-                client_id: '14aba13f2c12943885ba',
-                client_secret: 'cd3ccc6ddd72581d02d7add4b678f4b927105921',
-            },
-            })
-            gitment.render('gitment-container')
-        </script>
+        <!-- City版安装代码已完成 -->
     
 
 
