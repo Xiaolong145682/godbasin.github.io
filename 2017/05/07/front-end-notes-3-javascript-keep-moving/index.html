@@ -233,16 +233,22 @@ var jiathis_config = {data_track_clickback:'true'};
 
     <!-- 配置中启用多说时，导入相应代码 -->
     
-        <!--PC版-->
         <div style="padding: 1.5em 4%;">
-            <div id="SOHUCS" sid="2017/05/07/front-end-notes-3-javascript-keep-moving/index.html" styles="padding: 1.5em 4%;"></div>
+            <div id="gitment-container"></div>
         </div>
-        <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
-        <script type="text/javascript">
-            window.changyan.api.config({
-                appid: 'cyucuwQ9I',
-                conf: 'prod_33202c62db8445bb6729cc5b4eb8a685'
-            });
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script>
+            var gitment = new Gitment({
+            id: '2017/05/07/front-end-notes-3-javascript-keep-moving/index.html', // 可选。默认为 location.href
+            owner: 'godbasin',
+            repo: 'gitment-comments',
+            oauth: {
+                client_id: '14aba13f2c12943885ba',
+                client_secret: 'cd3ccc6ddd72581d02d7add4b678f4b927105921',
+            },
+            })
+            gitment.render('gitment-container')
         </script>
     
 
