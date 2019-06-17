@@ -3,6 +3,7 @@
 ---      
 
 ### 最新     
+> [《小程序开发月刊第六期（20190617）》](https://godbasin.github.io/2019/06/17/wxapp-latest-20190617/)   
 > [《小程序开发月刊第五期（20190515）》](https://godbasin.github.io/2019/05/15/wxapp-latest-20190515/)   
 > [《小程序开发月刊第四期（20190415）》](https://godbasin.github.io/2019/04/15/wxapp-latest-20190415/)   
 > [《前端这几年--1.转岗之路》](https://godbasin.github.io/2019/04/13/about-front-end-1-begin-in/)   
@@ -49,6 +50,7 @@
 > [《小程序开发月刊第三期（20190315）》](https://godbasin.github.io/2019/03/15/wxapp-latest-20190315/)   
 > [《小程序开发月刊第四期（20190415）》](https://godbasin.github.io/2019/04/15/wxapp-latest-20190415/)   
 > [《小程序开发月刊第五期（20190515）》](https://godbasin.github.io/2019/05/15/wxapp-latest-20190515/)   
+> [《小程序开发月刊第六期（20190617）》](https://godbasin.github.io/2019/06/17/wxapp-latest-20190617/)   
 
 ### Typescript相关      
 > [《如何发布 typescript npm 包》](https://godbasin.github.io/2019/01/05/ts-npm-package/)   
