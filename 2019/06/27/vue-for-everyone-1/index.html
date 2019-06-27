@@ -83,7 +83,7 @@ var _hmt = _hmt || [];
     </p>
   <p class="article-time">
     <time datetime="2019-06-27T15:09:59.000Z" itemprop="datePublished">2019-06-27</time>
-    更新日期:<time datetime="2019-06-27T15:10:08.704Z" itemprop="dateModified">2019-06-27</time>
+    更新日期:<time datetime="2019-06-27T16:12:52.824Z" itemprop="dateModified">2019-06-28</time>
     
   </p>
 </header>
@@ -243,7 +243,8 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1). jQuery + 事件驱动</span></div><div class="line"><span class="keyword">const</span> dom = $(<span class="string">'#ul'</span>);</div><div class="line"><span class="keyword">const</span> id = <span class="number">3</span>;</div><div class="line">dom.find(<span class="string">`li[data-id="<span class="subst">$&#123;id&#125;</span>"] span`</span>).text(<span class="string">'newName3'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 2). vue + 数据驱动</span></div><div class="line"><span class="keyword">const</span> id = <span class="number">3</span>;</div><div class="line">list.find(<span class="function"><span class="params">item</span> =&gt;</span> item.id == <span class="number">3</span>).name == <span class="string">'newName3'</span>;</div></pre></td></tr></table></figure>
-<p>在使用数据驱动的时候，模板渲染的事情会交给框架去完成，我们需要做的就是数据处理而已。</p>
+<p>在使用数据驱动的时候，模板渲染的事情会交给框架去完成，我们需要做的就是数据处理而已。那么转换了数据驱动之后，有什么好处呢？</p>
+<p>当我们把一个页面抽象成数据来表示之后，可以做的事情就多了。如果我们把所有的页面、组件、展示内容和接口配置等都变成了配置数据，那么我们就可以把所有的东西都进行配置化。以前也写过一篇<a href="https://godbasin.github.io/2018/06/09/component-with-configuration/">《组件配置化》</a>，另外在玩 Angular 的时候也做过类似的设计，包括<a href="http://angular2-form-schame.godbasin.com/index.html" target="_blank" rel="external">组件的配置–通过配置生成表单</a>和<a href="http://angular-custom-app.godbasin.com/#/home/custom-app" target="_blank" rel="external">页面应用的配置–通过配置生成管理端</a>。当然，Vue 也完全可以做这种事情的，配置化的难度常常不在于技术有多难，而在于怎么把业务进行适当的抽象。</p>
 <h2 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h2><p>其实前端工程化这块，我并不是能理解得很深刻，能讲给大家的，应该只是自己的一种理解了。一般来说，现在的主流构建工具应该是 Webpack，包括我们使用 Vue 官方脚手架生成的代码，构建工具也是 Webpack。</p>
 <p>我们在代码中会使用到很多的资源，图片、样式、代码，还有各式各样的依赖包，而打包的时候怎么实现按需分块、处理依赖关系、不包含多余的文件或内容，同时提供开发和生产环境，包括本地调试自动更新到浏览器这些能力，都是由 Webpack 整合起来的。</p>
 <h3 id="npm-依赖包"><a href="#npm-依赖包" class="headerlink" title="npm 依赖包"></a>npm 依赖包</h3><p>要实现工程化，前端开发几乎都离不开 nodejs 的包管理器 npm，比如前端在搭建本地开发服务以及打包编译前端代码等都会用到。在前端开发过程中，经常用到<code>npm install</code>来安装所需的依赖。</p>
