@@ -3,6 +3,7 @@
 ---      
 
 ### 最新     
+> [《前端这几年--2.工作原则和选择》](https://godbasin.github.io/2019/06/30/about-front-end-2-principle/)   
 > [《9102全员学Vue--1.如何理解Vue》](https://godbasin.github.io/2019/06/27/vue-for-everyone-1/)   
 > [《小程序开发月刊第六期（20190617）》](https://godbasin.github.io/2019/06/17/wxapp-latest-20190617/)   
 > [《小程序开发月刊第五期（20190515）》](https://godbasin.github.io/2019/05/15/wxapp-latest-20190515/)   
