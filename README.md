@@ -3,6 +3,7 @@
 ---      
 
 ### 最新     
+> [《9102全员学Vue--3.把页面拼成个Web应用》](https://godbasin.github.io/2019/07/21/vue-for-everyone-3/)   
 > [《小程序开发月刊第七期（20190715）》](https://godbasin.github.io/2019/07/15/wxapp-latest-20190715/)   
 > [《9102全员学Vue--2.怎么三两下拼出一个页面》](https://godbasin.github.io/2019/07/11/vue-for-everyone-2/)   
 > [《前端这几年--2.工作原则和选择》](https://godbasin.github.io/2019/06/30/about-front-end-2-principle/)   
@@ -21,6 +22,7 @@
 ### 全员学Vue
 > [《9102全员学Vue--1.如何理解前端和Vue》](https://godbasin.github.io/2019/06/27/vue-for-everyone-1/)   
 > [《9102全员学Vue--2.怎么三两下拼出一个页面》](https://godbasin.github.io/2019/07/11/vue-for-everyone-2/)   
+> [《9102全员学Vue--3.把页面拼成个Web应用》](https://godbasin.github.io/2019/07/21/vue-for-everyone-3/)   
 
 ### 工作杂谈    
 > [《前端这几年--1.转岗之路》](https://godbasin.github.io/2019/04/13/about-front-end-1-begin-in/)   
