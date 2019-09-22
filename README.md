@@ -6,7 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
-> [《小程序开发月刊第九期（20190016）》](https://godbasin.github.io/2019/09/16/wxapp-latest-20190916/)   
+> [《小程序开发月刊第九期（20190916）》](https://godbasin.github.io/2019/09/16/wxapp-latest-20190916/)   
 > [《小程序开发月刊第八期（20190815）》](https://godbasin.github.io/2019/08/15/wxapp-latest-20190815/)   
 > [《被删的前端游乐场建成！》](https://godbasin.github.io/2019/07/27/front-end-playground/)   
 > [《9102全员学Vue--3.把页面拼成个Web应用》](https://godbasin.github.io/2019/07/21/vue-for-everyone-3/)   
