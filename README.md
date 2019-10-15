@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《小程序开发月刊第十期（20191015）》](https://godbasin.github.io/2019/10/15/wxapp-latest-20191015/)   
 > [《前端这几年--3.关于成长和焦虑》](https://godbasin.github.io/2019/10/13/about-front-end-3-growth/)   
 > [《小程序开发月刊第九期（20190916）》](https://godbasin.github.io/2019/09/16/wxapp-latest-20190916/)   
 > [《小程序开发月刊第八期（20190815）》](https://godbasin.github.io/2019/08/15/wxapp-latest-20190815/)   
