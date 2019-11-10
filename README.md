@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《前端 CHANGELOG 生成指南》](https://godbasin.github.io/2019/11/10/change-log/)   
 > [《小程序的奇技淫巧 -- globalDataBehavior管理全局状态》](https://godbasin.github.io/2019/11/09/wxapp-global-data-behavior/)   
 > [《小程序开发月刊第十期（20191015）》](https://godbasin.github.io/2019/10/15/wxapp-latest-20191015/)   
 > [《前端这几年--3.关于成长和焦虑》](https://godbasin.github.io/2019/10/13/about-front-end-3-growth/)   
