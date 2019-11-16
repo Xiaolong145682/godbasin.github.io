@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《小程序开发月刊第11期（20191115）》](https://godbasin.github.io/2019/11/15/wxapp-latest-20191115/)   
 > [《前端 CHANGELOG 生成指南》](https://godbasin.github.io/2019/11/10/change-log/)   
 > [《小程序的奇技淫巧 -- globalDataBehavior管理全局状态》](https://godbasin.github.io/2019/11/09/wxapp-global-data-behavior/)   
 > [《小程序开发月刊第十期（20191015）》](https://godbasin.github.io/2019/10/15/wxapp-latest-20191015/)   
@@ -63,6 +64,7 @@
 > [《小程序开发月刊第八期（20190815）》](https://godbasin.github.io/2019/08/15/wxapp-latest-20190815/)   
 > [《小程序开发月刊第九期（20190916）》](https://godbasin.github.io/2019/09/16/wxapp-latest-20190916/)   
 > [《小程序开发月刊第十期（20191015）》](https://godbasin.github.io/2019/10/15/wxapp-latest-20191015/)   
+> [《小程序开发月刊第11期（20191115）》](https://godbasin.github.io/2019/11/15/wxapp-latest-20191115/)   
 
 ### Typescript相关      
 > [《如何发布 typescript npm 包》](https://godbasin.github.io/2019/01/05/ts-npm-package/)   
