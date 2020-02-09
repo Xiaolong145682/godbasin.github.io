@@ -22,28 +22,26 @@
 > [《9102全员学Vue--3.把页面拼成个Web应用》](https://godbasin.github.io/2019/07/21/vue-for-everyone-3/)   
 
 ### 深入理解Vue.js实战
-- [前言 前端框架的出现](https://godbasin.github.io/vue-ebook/vue-ebook/0.html)
-
-#### 第一部分 Vue快速入门
-- [第1章 Vue 框架介绍](https://godbasin.github.io/vue-ebook/vue-ebook/1.html)
-- [第2章 Vue 环境快速搭建](https://godbasin.github.io/vue-ebook/vue-ebook/2.html)
-- [第3章 Vue 基础介绍](https://godbasin.github.io/vue-ebook/vue-ebook/3.html)
-- [第4章 Vue 组件的使用](https://godbasin.github.io/vue-ebook/vue-ebook/4.html)
-- [第5章 常用指令和自定义指令](https://godbasin.github.io/vue-ebook/vue-ebook/5.html)
-- [第6章 Vue 动画](https://godbasin.github.io/vue-ebook/vue-ebook/6.html)
-- [第7章 Vue Router 路由搭建应用](https://godbasin.github.io/vue-ebook/vue-ebook/7.html)
-- [第8章 实战：Todo List 从组件到应用](https://godbasin.github.io/vue-ebook/vue-ebook/8.html)
-
-#### 第二部分 Vue的正确使用方式
-- [第9章 思维转变与大型项目管理](https://godbasin.github.io/vue-ebook/vue-ebook/9.html)
-- [第10章 如何正确地进行抽象](https://godbasin.github.io/vue-ebook/vue-ebook/10.html)
-- [第11章 全局数据管理与 Vuex](https://godbasin.github.io/vue-ebook/vue-ebook/11.html)
-- [第12章 实战：三天开发一个管理端](https://godbasin.github.io/vue-ebook/vue-ebook/12.html)
-- [第13章 实战：表单配置化实现](https://godbasin.github.io/vue-ebook/vue-ebook/13.html)
-- [第14章 实战：使用 Webpack 或 Vue CLI 搭建多页应用](https://godbasin.github.io/vue-ebook/vue-ebook/14.html)
-- [第15章 Vue 周边拓展](https://godbasin.github.io/vue-ebook/vue-ebook/15.html)
-- [第16章 关于 Vue 3.0](https://godbasin.github.io/vue-ebook/vue-ebook/16.html)
-- [后记 关于框架选型](https://godbasin.github.io/vue-ebook/vue-ebook/99.html)
+> [前言 前端框架的出现](https://godbasin.github.io/vue-ebook/vue-ebook/0.html)
+> **第一部分 Vue快速入门**
+> [第1章 Vue 框架介绍](https://godbasin.github.io/vue-ebook/vue-ebook/1.html)
+> [第2章 Vue 环境快速搭建](https://godbasin.github.io/vue-ebook/vue-ebook/2.html)
+> [第3章 Vue 基础介绍](https://godbasin.github.io/vue-ebook/vue-ebook/3.html)
+> [第4章 Vue 组件的使用](https://godbasin.github.io/vue-ebook/vue-ebook/4.html)
+> [第5章 常用指令和自定义指令](https://godbasin.github.io/vue-ebook/vue-ebook/5.html)
+> [第6章 Vue 动画](https://godbasin.github.io/vue-ebook/vue-ebook/6.html)
+> [第7章 Vue Router 路由搭建应用](https://godbasin.github.io/vue-ebook/vue-ebook/7.html)
+> [第8章 实战：Todo List 从组件到应用](https://godbasin.github.io/vue-ebook/vue-ebook/8.html)
+> **第二部分 Vue的正确使用方式**
+> [第9章 思维转变与大型项目管理](https://godbasin.github.io/vue-ebook/vue-ebook/9.html)
+> [第10章 如何正确地进行抽象](https://godbasin.github.io/vue-ebook/vue-ebook/10.html)
+> [第11章 全局数据管理与 Vuex](https://godbasin.github.io/vue-ebook/vue-ebook/11.html)
+> [第12章 实战：三天开发一个管理端](https://godbasin.github.io/vue-ebook/vue-ebook/12.html)
+> [第13章 实战：表单配置化实现](https://godbasin.github.io/vue-ebook/vue-ebook/13.html)
+> [第14章 实战：使用 Webpack 或 Vue CLI 搭建多页应用](https://godbasin.github.io/vue-ebook/vue-ebook/14.html)
+> [第15章 Vue 周边拓展](https://godbasin.github.io/vue-ebook/vue-ebook/15.html)
+> [第16章 关于 Vue 3.0](https://godbasin.github.io/vue-ebook/vue-ebook/16.html)
+> [后记 关于框架选型](https://godbasin.github.io/vue-ebook/vue-ebook/99.html)
 
 ### 全员学Vue
 > [《9102全员学Vue--1.如何理解前端和Vue》](https://godbasin.github.io/2019/06/27/vue-for-everyone-1/)   
