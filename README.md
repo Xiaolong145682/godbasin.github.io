@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《小程序开发月刊第14期（20200314）》](https://godbasin.github.io/2020/03/14/wxapp-latest-20200314/)   
 > [《前端面试这件事--1.面试准备》](https://godbasin.github.io/2020/03/07/interview-1-ready/)   
 > [《小程序开发月刊第13期（20200214）》](https://godbasin.github.io/2020/02/14/wxapp-latest-20200214/)   
 > [《深入理解Vue.js实战》上线啦](https://godbasin.github.io/2020/02/09/vue-ebook/)   
@@ -97,6 +98,7 @@
 > [《小程序开发月刊第11期（20191115）》](https://godbasin.github.io/2019/11/15/wxapp-latest-20191115/)   
 > [《小程序开发月刊第12期（20191216）》](https://godbasin.github.io/2019/12/16/wxapp-latest-20191216/)   
 > [《小程序开发月刊第13期（20200214）》](https://godbasin.github.io/2020/02/14/wxapp-latest-20200214/)   
+> [《小程序开发月刊第14期（20200314）》](https://godbasin.github.io/2020/03/14/wxapp-latest-20200314/)   
 
 ### Typescript相关      
 > [《如何发布 typescript npm 包》](https://godbasin.github.io/2019/01/05/ts-npm-package/)   
