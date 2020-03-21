@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《前端面试这件事--3.专业知识概述》](https://godbasin.github.io/2020/03/21/interview-3-basic-skills/)   
 > [《前端面试这件事--2.面试流程》](https://godbasin.github.io/2020/03/15/interview-2-stage/)   
 > [《小程序开发月刊第14期（20200314）》](https://godbasin.github.io/2020/03/14/wxapp-latest-20200314/)   
 > [《前端面试这件事--1.面试准备》](https://godbasin.github.io/2020/03/07/interview-1-ready/)   
@@ -41,11 +42,6 @@
 > [第16章 关于 Vue 3.0](https://godbasin.github.io/vue-ebook/vue-ebook/16.html)  
 > [后记 关于框架选型](https://godbasin.github.io/vue-ebook/vue-ebook/99.html)  
 
-### 全员学Vue
-> [《9102全员学Vue--1.如何理解前端和Vue》](https://godbasin.github.io/2019/06/27/vue-for-everyone-1/)   
-> [《9102全员学Vue--2.怎么三两下拼出一个页面》](https://godbasin.github.io/2019/07/11/vue-for-everyone-2/)   
-> [《9102全员学Vue--3.把页面拼成个Web应用》](https://godbasin.github.io/2019/07/21/vue-for-everyone-3/)   
-
 ### 工作杂谈    
 > [《前端这几年--1.转岗之路》](https://godbasin.github.io/2019/04/13/about-front-end-1-begin-in/)   
 > [《前端这几年--2.工作原则和选择》](https://godbasin.github.io/2019/06/30/about-front-end-2-principle/)   
@@ -57,6 +53,7 @@
 ### 前端面试
 > [《前端面试这件事--1.面试准备》](https://godbasin.github.io/2020/03/07/interview-1-ready/)   
 > [《前端面试这件事--2.面试流程》](https://godbasin.github.io/2020/03/15/interview-2-stage/)   
+> [《前端面试这件事--3.专业知识概述》](https://godbasin.github.io/2020/03/21/interview-3-basic-skills/)   
 
 ### 小程序应用    
 > [《小程序奇技淫巧之页面跳转管理》](https://godbasin.github.io/2019/12/08/wxapp-navigate/)   
@@ -79,6 +76,11 @@
 > [《小程序的底层框架》](https://godbasin.github.io/2018/09/02/wxapp-technology-architecture/)   
 > [《小程序的诞生》](https://godbasin.github.io/2018/08/25/wxapp-generate/)   
 > [《认识小程序云开发》](https://godbasin.github.io/2018/08/18/wxapp-cloud/)   
+
+### 全员学Vue
+> [《9102全员学Vue--1.如何理解前端和Vue》](https://godbasin.github.io/2019/06/27/vue-for-everyone-1/)   
+> [《9102全员学Vue--2.怎么三两下拼出一个页面》](https://godbasin.github.io/2019/07/11/vue-for-everyone-2/)   
+> [《9102全员学Vue--3.把页面拼成个Web应用》](https://godbasin.github.io/2019/07/21/vue-for-everyone-3/)   
 
 ### 小程序开发月刊  
 > [《小程序开发月刊第一期（20190114）》](https://godbasin.github.io/2019/01/14/wxapp-latest-20190114/)   
