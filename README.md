@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《前端这几年--5.沉淀习惯养成》](https://godbasin.github.io/2020/03/22/about-front-end-5/)   
 > [《前端面试这件事--3.专业知识概述》](https://godbasin.github.io/2020/03/21/interview-3-basic-skills/)   
 > [《前端面试这件事--2.面试流程》](https://godbasin.github.io/2020/03/15/interview-2-stage/)   
 > [《小程序开发月刊第14期（20200314）》](https://godbasin.github.io/2020/03/14/wxapp-latest-20200314/)   
@@ -14,11 +15,6 @@
 > [《深入理解Vue.js实战》上线啦](https://godbasin.github.io/2020/02/09/vue-ebook/)   
 > [《小程序开发月刊第12期（20191216）》](https://godbasin.github.io/2019/12/16/wxapp-latest-20191216/)   
 > [《小程序奇技淫巧之页面跳转管理》](https://godbasin.github.io/2019/12/08/wxapp-navigate/)   
-> [《小程序奇技淫巧之日志能力》](https://godbasin.github.io/2019/12/07/wxapp-logs/)   
-> [《前端这几年--4.生命与健康》](https://godbasin.github.io/2019/11/30/about-front-end-4-health/)   
-> [《小程序开发月刊第11期（20191115）》](https://godbasin.github.io/2019/11/15/wxapp-latest-20191115/)   
-> [《前端 CHANGELOG 生成指南》](https://godbasin.github.io/2019/11/10/change-log/)   
-> [《小程序奇技淫巧之globalDataBehavior管理全局状态》](https://godbasin.github.io/2019/11/09/wxapp-global-data-behavior/)   
 
 ### 深入理解Vue.js实战  
 > [前言 前端框架的出现](https://godbasin.github.io/vue-ebook/vue-ebook/0.html)  
