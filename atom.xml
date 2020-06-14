@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://godbasin.github.io/"/>
-  <updated>2020-04-18T05:15:31.793Z</updated>
+  <updated>2020-06-14T15:06:03.805Z</updated>
   <id>https://godbasin.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>多人协作如何进行冲突处理</title>
+    <link href="https://godbasin.github.io/2020/06/14/operation-transform/"/>
+    <id>https://godbasin.github.io/2020/06/14/operation-transform/</id>
+    <published>2020-06-14T08:23:31.000Z</published>
+    <updated>2020-06-14T15:06:03.805Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近接触到一些针对多人同时操作进行冲突处理的场景，简单介绍下相关的实现方式。<br><a id="more"></a></p><h2 id="Operational-transformation-OT"><a href="#Operational-transformation-OT" class="headerlink" title="Operational transformation(OT)"></a>Operational transformation(OT)</h2><p>OT 算法最初是为在纯文本文档的协作编辑中的一致性维护和并发控制而发明的，在本文中我们也主要掌握一致性维护相关的一些方法。</p><h3 id="协同软件的冲突"><a href="#协同软件的冲突" class="headerlink" title="协同软件的冲突"></a>协同软件的冲突</h3><p>想必大家都知道，在多人协同场景下，必然会出现各种各样的冲突场景。</p><p>举个例子，团队接到一个超大型的项目需要开发，老板说10分钟给出排期和分工。然后瑟瑟发抖的大家二话不说打开腾讯文档，创建了一个表格，让每个模块负责人先针对自己模块来进行工作量拆分和预估。</p><p>PM 创建了表格之后，将表格丢到群里，说前端后台各自创建一个子表来写相应的工作量情况。</p><p>前端张三马上点开了表格，点击添加子表，系统自动生成“工作表2”这样一个子表。与此同时，后台李四也进行了同样的操作。</p><p>那么问题来了，一个表格中原则上并不允许两个同样名字的子表，这个时候冲突就出现了，我们要怎么处理呢？</p><p>虽然是两个同样名字的子表，但我们并不能将它们进行合并，因为对于张三和李四来说，他们就是在自己创建的子表里写工作拆分和排期情况。所以，我们需要使用对用户影响最小的方式，来解决掉这个冲突。</p><h3 id="操作的拆分"><a href="#操作的拆分" class="headerlink" title="操作的拆分"></a>操作的拆分</h3><p>为了处理冲突，我们需要将一些操作进行拆分。例如，我们插入一个子表这样一个操作，除了插入自身的操作，可能需要对其他子表进行移动操作。那么，对于一个子表来说，我们的操作可能会包括：</p><ul><li>插入</li><li>重命名</li><li>移动</li><li>删除</li><li>更新内容</li><li>…</li></ul><p>只要拆分得足够仔细，对于子表的所有用户行为，都可以由这些操作来组合成最终的效果。例如，复制粘贴一张子表，可以拆分为<code>插入-重命名-更新内容</code>；剪切一张子表，可以拆分为<code>插入-更新内容-删除-移动其他子表</code>。通过分析用户行为，我们可以提取出这些基本操作。</p><h3 id="操作间的冲突处理"><a href="#操作间的冲突处理" class="headerlink" title="操作间的冲突处理"></a>操作间的冲突处理</h3><p>基本操作提取出来之后，我们就可以很仔细地梳理和分析操作和操作之间是否会产生冲突，以及要怎么处理了。</p><p>例如，我们上面提取出来的关于子表的操作中，包括<code>插入</code>、<code>重命名</code>、<code>移动</code>、<code>删除</code>、<code>更新内容</code>五种操作，实际上，每种操作都可能和自身、以及其他四种操作都发生冲突，于是我们可能有<code>5*5=25</code>种需要考虑的冲突情况。</p><p>我们先来大致看看这 25 组冲突中，是不是全都需要进行冲突处理的。例如，<code>更新内容</code>一般来说跟其他几个操作都不会发生什么冲突，因为更新内容改变的是表格的内容，而不是位置、名字这些，一个表格内部和另一个表格内部基本上不会发生冲突。但<code>重命名</code>和<code>插入</code>之间，满足一定条件的时候（插入的子表名字和重命名的名字相同）可能就会产生冲突。</p><p>你可能会觉得疑惑，<code>插入-重命名</code>和<code>重命名-插入</code>不是一样的吗？我们先带着这个疑问继续往后看。</p><h3 id="最终一致性的实现"><a href="#最终一致性的实现" class="headerlink" title="最终一致性的实现"></a>最终一致性的实现</h3><p>说了那么多，看起来跟 OT 算法完全没有关系呀？？</p><p>OT 算法的一个核心目标，是实现最终一致性。为什么会有最终一致性的需求呢？</p><p>我们再看回张三和李四的例子，由于系统不允许存在有两个同样名称的子表，因此服务器会根据收到请求的顺序，将第二个子表进行重命名。假设张三的请求先到达服务端，那么李四创建的表格则需要被自动重命名为“工作表2（自动重命名）”。</p><p>为了让用户体验更流畅，我们在用户侧使用无锁、非阻塞的方式来进行协同。也就是对于李四来说，他已经创建了这样一个叫“工作表2”的子表了，由于网络延迟等原因可能还已经编辑上了。这时候服务端告诉李四，张三已经创建了一个“工作表2”的子表了，你自己看着办吧。</p><p>李四说，我已经编辑了这么多，你总不能让我全删掉重来吧。所以李四想了个办法，先将自己本地的表格<code>重命名</code>为”工作表2（自动重命名）”，然后将张三的子表<code>插入</code>。除此之外，由于自己的插入顺序在后面，还需要将自己的子表<code>移动</code>到后面一个位置。做完这些操作之后，李四告诉服务器，自己也<code>插入</code>了一个叫“工作表2（自动重命名）”的子表。</p><p>我们梳理下逻辑，可以得到：</p><ul><li>对于李四本地，需要进行的操作是：<code>重命名 + 插入 + 移动</code></li><li>对于服务器，需要进行的操作是：<code>插入</code>更新后的子表</li></ul><p>我们来看看这个 OT 算法的简略说明图：<br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/google_ot.jpg" alt=""></p><p>我们代入到张三李四这个场景下：<br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/sheet_ot.png" alt=""></p><p>可以看到，对于服务端来说，最终就是新增了两个子表，一个是张三的“工作表2”，另一个是李四的“工作表2（自动重命名）”。</p><p>除此之外，这个场景中还存在比较细致的时间问题。上面我们说李四收到服务器发来的张三的操作之后，在本地进行<code>重命名 + 插入 + 移动</code>，然后告诉服务器的操作是<code>插入</code>更新后的子表。但是还有个可能性，就是李四收到服务器的消息之前，就已经把自己<code>插入</code>“工作表2”的操作发出去给服务器了。这种情况下，服务器也需要具备处理冲突的能力，来维持最终一致性。</p><p>也就是说，我们在本地和服务器都有一套一致的冲突处理逻辑，才能保证算法的最终一致性。</p><p>但除了最终一致性，冲突处理还有其他很多需要考虑的场景，例如版本管理、性能问题等，后面有机会再慢慢介绍吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近接触到一些针对多人同时操作进行冲突处理的场景，简单介绍下相关的实现方式。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端解决方案" scheme="https://godbasin.github.io/categories/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+      <category term="逻辑实现" scheme="https://godbasin.github.io/tags/%E9%80%BB%E8%BE%91%E5%AE%9E%E7%8E%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>前端这几年--8.工作中的矛盾</title>
@@ -424,28 +446,6 @@
     <summary type="html">
     
       &lt;p&gt;全局状态管理在小程序里也算是一道难题了，有些小伙伴会选择引入一些类 Store 的库来管理全局状态。今天来给大家分享一个，使用 Behavior 来管理全局状态的小技巧。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="小程序双皮奶" scheme="https://godbasin.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8F%8C%E7%9A%AE%E5%A5%B6/"/>
-    
-    
-      <category term="教程" scheme="https://godbasin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小程序开发月刊第十期（20191015）</title>
-    <link href="https://godbasin.github.io/2019/10/15/wxapp-latest-20191015/"/>
-    <id>https://godbasin.github.io/2019/10/15/wxapp-latest-20191015/</id>
-    <published>2019-10-15T15:05:07.000Z</published>
-    <updated>2019-10-15T15:05:29.979Z</updated>
-    
-    <content type="html"><![CDATA[<p>国庆期间新功能比较少，但月刊也不能少~~<br><a id="more"></a></p><h1 id="小程序-latest"><a href="#小程序-latest" class="headerlink" title="小程序 latest"></a>小程序 latest</h1><h2 id="小程序能力"><a href="#小程序能力" class="headerlink" title="小程序能力"></a>小程序能力</h2><h3 id="「微信官方文档」支持在线交互式预览"><a href="#「微信官方文档」支持在线交互式预览" class="headerlink" title="「微信官方文档」支持在线交互式预览"></a>「微信官方文档」支持在线交互式预览</h3><p>微信官方文档部分组件“示例代码”已从“静态代码+静态贴图预览”模式升级为“代码编辑器+交互式预览”，实现阅读示例代码时可在浏览器端同步体验示例效果。目前该功能已覆盖大部分小程序<a href="https://developers.weixin.qq.com/miniprogram/dev/component/button.html" target="_blank" rel="external">表单组件</a>。</p><h3 id="小程序模板消息能力调整通知"><a href="#小程序模板消息能力调整通知" class="headerlink" title="小程序模板消息能力调整通知"></a>小程序模板消息能力调整通知</h3><p>为提升小程序模板消息能力的使用体验，平台对模板消息的下发条件进行了调整，由用户自主订阅所需消息，包括：一次性订阅消息、长期性订阅消息。<br>小程序订阅消息接口上线后，原先的模板消息接口将停止使用，详情如下：</p><ol><li>开发者可登录小程序管理后台开启订阅消息功能，接口开发可参考文档：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message.html" target="_blank" rel="external">小程序订阅消息</a></li><li>开发者使用订阅消息能力时，需遵循运营规范，不可用奖励或其它形式强制用户订阅，不可下发与用户预期不符或违反国家法律法规的内容。具体可参考文档：<a href="https://developers.weixin.qq.com/miniprogram/product/#_5-21-%E6%BB%A5%E7%94%A8%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF" target="_blank" rel="external">小程序订阅消息接口运营规范</a></li><li>原有的小程序模板消息接口将于 2020 年 1 月 10 日下线，届时将无法使用此接口发送模板消息，请各位开发者注意及时调整接口。 </li></ol><ul><li><a href="https://developers.weixin.qq.com/community/develop/doc/00008a8a7d8310b6bf4975b635a401" target="_blank" rel="external">参考链接</a></li><li><a href="https://developers.weixin.qq.com/community/develop/doc/00008a8a7d8310b6bf4975b635a401" target="_blank" rel="external">帖子详情查看</a></li></ul><blockquote><p>微信7.0.7版本起，当用户打开的小程序最底层页面是非首页时，默认展示“返回首页”按钮，开发者可在页面 onShow 中调用 hideHomeButton 进行隐藏。</p></blockquote><h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><ul><li><a href="https://developers.weixin.qq.com/community/develop/doc/00004843288058ed4039d223951401" target="_blank" rel="external">关于微信小程序内容安全要求规范</a>  </li><li><a href="https://developers.weixin.qq.com/community/develop/doc/000a4881f7c5f0ee9049654bf5b001" target="_blank" rel="external">社区问题反馈以及功能优化更新（09.23-09.27）</a>  </li><li><a href="https://developers.weixin.qq.com/community/develop/doc/000a023c8a05888f68395602e51c01" target="_blank" rel="external">社区问题反馈以及功能优化更新（09.16-09.20）</a>  </li><li><a href="https://developers.weixin.qq.com/community/develop/doc/00026861b98900d2ef29d0d2956c01" target="_blank" rel="external">社区问题反馈以及功能优化更新（09.02-09.13）</a>  </li></ul><h2 id="小程序·云开发"><a href="#小程序·云开发" class="headerlink" title="小程序·云开发"></a>小程序·云开发</h2><p>没啥新能力上线。</p><h2 id="开发者工具"><a href="#开发者工具" class="headerlink" title="开发者工具"></a>开发者工具</h2><p>没啥新能力推出。</p><h3 id="更多更新说明"><a href="#更多更新说明" class="headerlink" title="更多更新说明"></a>更多更新说明</h3><p>参考<a href="https://developers.weixin.qq.com/community/develop/doc/000aa65c3d4cb852b349826b751401" target="_blank" rel="external">微信开发者工具 1.02.1910121 RC 更新说明</a>，这期新增能力包括：</p><ol><li>优化再次打开项目时的首次编译速度。  </li><li>真机调试支持直接触发更新周期性缓存数据。  </li><li>默认打开 GPU 加速。  </li><li>修复文件保存后编译不生效的问题。  </li><li>修复全新安装时无法打开的问题。</li><li>修复未使用体验评分导致内存泄漏。</li><li>只有未授权时直接调用 getUserInfo 才会出现升级提示。  </li></ol><h1 id="小程序教程"><a href="#小程序教程" class="headerlink" title="小程序教程"></a>小程序教程</h1><h2 id="社区精选文章"><a href="#社区精选文章" class="headerlink" title="社区精选文章"></a>社区精选文章</h2><p>没有新的好文章，往期内容可以查看<a href="https://developers.weixin.qq.com/community/develop/article" target="_blank" rel="external">文章分享</a>。</p><h2 id="最新踩坑-amp-amp-Tips"><a href="#最新踩坑-amp-amp-Tips" class="headerlink" title="最新踩坑 &amp;&amp; Tips"></a>最新踩坑 &amp;&amp; Tips</h2><h3 id="【开发Tips】-input兼容性"><a href="#【开发Tips】-input兼容性" class="headerlink" title="【开发Tips】-input兼容性"></a>【开发Tips】-input兼容性</h3><p>背景：<code>&lt;input&gt;</code>number类型 需要显示344（如123 4567 8910）这样的手机格式。<br>ios可以通过在js中加入空格来显示，但是在安卓下。空格不显示，被过滤了。</p><h3 id="【踩坑信息】-chooseImage完showLoading失效"><a href="#【踩坑信息】-chooseImage完showLoading失效" class="headerlink" title="【踩坑信息】- chooseImage完showLoading失效"></a>【踩坑信息】- chooseImage完showLoading失效</h3><p>IOS 微信 7.0.7 版本 chooseImage 完 showLoading 失效，客户端下个大版本修复。</p><ul><li><a href="https://developers.weixin.qq.com/community/develop/doc/000a6c36870868acd329d975e51800?highLine=chooseImage%2520showLoading" target="_blank" rel="external">参考地址</a></li></ul><h3 id="【收集信息】-云函数"><a href="#【收集信息】-云函数" class="headerlink" title="【收集信息】- 云函数"></a>【收集信息】- 云函数</h3><p>云函数会以日志形式保存请求，响应内容，其中请求日志是内部日志，响应日志是外部日志，就是在控制台中看到的云函数日志。<br>在数据流请求中，为了有效的帮助客户解答一些问题，所以目前会记记录请求的入参和精简后的出参：</p><ol><li>日志有权限控制，日志没加白名单是不能访问的。</li><li>日志存放时间7天。<br>响应回包在日志中会做个精简的记录, 会记录外层的key和value。value会记录几十个字符。</li></ol><h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>国庆期间没啥新能力上线，大家来看看我家猫好了。<br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/kitty/kitty-1.jpg" alt="image"><br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/kitty/kitty-2.jpg" alt="image"><br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/kitty/kitty-3.jpg" alt="image"><br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/kitty/kitty-4.jpg" alt="image"><br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/kitty/kitty-5.jpg" alt="image"><br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/kitty/kitty-6.jpg" alt="image"><br><img src="https://github-imglib-1255459943.cos.ap-chengdu.myqcloud.com/kitty/kitty-7.jpg" alt="image"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;国庆期间新功能比较少，但月刊也不能少~~&lt;br&gt;
     
     </summary>
     
