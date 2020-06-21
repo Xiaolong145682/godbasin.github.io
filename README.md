@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《大型前端项目要怎么跟踪和分析函数调用链》](https://godbasin.github.io/2020/06/21/trace-stash/)   
 > [《多人协作如何进行冲突处理》](https://godbasin.github.io/2020/06/14/operation-transform/)   
 > [《前端这几年--8.工作中的矛盾》](https://godbasin.github.io/2020/04/18/about-front-end-8/)   
 > [《小程序开发月刊第15期（20200415）》](https://godbasin.github.io/2020/04/15/wxapp-latest-20200415/)   
