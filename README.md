@@ -6,6 +6,8 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《VSCode 源码解读：事件系统设计》](https://godbasin.github.io/2020/07/05/vscode-event/)   
+> [《响应式编程在前端领域的应用》](https://godbasin.github.io/2020/07/04/reactive-programing/)   
 > [《谈谈依赖和解耦》](https://godbasin.github.io/2020/06/26/module-seperate/)   
 > [《大型前端项目要怎么跟踪和分析函数调用链》](https://godbasin.github.io/2020/06/21/trace-stash/)   
 > [《多人协作如何进行冲突处理》](https://godbasin.github.io/2020/06/14/operation-transform/)   
@@ -22,8 +24,6 @@
 > [《前端面试这件事--1.面试准备》](https://godbasin.github.io/2020/03/07/interview-1-ready/)   
 > [《小程序开发月刊第13期（20200214）》](https://godbasin.github.io/2020/02/14/wxapp-latest-20200214/)   
 > [《深入理解Vue.js实战》上线啦](https://godbasin.github.io/2020/02/09/vue-ebook/)   
-> [《小程序开发月刊第12期（20191216）》](https://godbasin.github.io/2019/12/16/wxapp-latest-20191216/)   
-> [《小程序奇技淫巧之页面跳转管理》](https://godbasin.github.io/2019/12/08/wxapp-navigate/)   
 
 ### 深入理解Vue.js实战  
 > [前言 前端框架的出现](https://godbasin.github.io/vue-ebook/vue-ebook/0.html)  
