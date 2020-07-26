@@ -6,6 +6,7 @@
 欢迎来[被删的前端游乐场](https://godbasin.github.io/front-end-playground)边学前端边撸猫噢~
 
 ### 最新     
+> [《前端面试这件事--6.Javascript相关》](https://godbasin.github.io/2020/07/26/interview-6-javascript/)   
 > [《VSCode 源码解读：事件系统设计》](https://godbasin.github.io/2020/07/05/vscode-event/)   
 > [《响应式编程在前端领域的应用》](https://godbasin.github.io/2020/07/04/reactive-programing/)   
 > [《谈谈依赖和解耦》](https://godbasin.github.io/2020/06/26/module-seperate/)   
@@ -19,11 +20,6 @@
 > [《前端面试这件事--4.项目经验概述》](https://godbasin.github.io/2020/03/28/interview-4-project-skills/)   
 > [《前端这几年--5.沉淀习惯养成》](https://godbasin.github.io/2020/03/22/about-front-end-5/)   
 > [《前端面试这件事--3.专业知识概述》](https://godbasin.github.io/2020/03/21/interview-3-basic-skills/)   
-> [《前端面试这件事--2.面试流程》](https://godbasin.github.io/2020/03/15/interview-2-stage/)   
-> [《小程序开发月刊第14期（20200314）》](https://godbasin.github.io/2020/03/14/wxapp-latest-20200314/)   
-> [《前端面试这件事--1.面试准备》](https://godbasin.github.io/2020/03/07/interview-1-ready/)   
-> [《小程序开发月刊第13期（20200214）》](https://godbasin.github.io/2020/02/14/wxapp-latest-20200214/)   
-> [《深入理解Vue.js实战》上线啦](https://godbasin.github.io/2020/02/09/vue-ebook/)   
 
 ### 深入理解Vue.js实战  
 > [前言 前端框架的出现](https://godbasin.github.io/vue-ebook/vue-ebook/0.html)  
@@ -48,6 +44,8 @@
 > [后记 关于框架选型](https://godbasin.github.io/vue-ebook/vue-ebook/99.html)  
 
 ### 前端杂谈    
+> [《VSCode 源码解读：事件系统设计》](https://godbasin.github.io/2020/07/05/vscode-event/)   
+> [《响应式编程在前端领域的应用》](https://godbasin.github.io/2020/07/04/reactive-programing/)   
 > [《谈谈依赖和解耦》](https://godbasin.github.io/2020/06/26/module-seperate/)   
 > [《大型前端项目要怎么跟踪和分析函数调用链》](https://godbasin.github.io/2020/06/21/trace-stash/)   
 > [《多人协作如何进行冲突处理》](https://godbasin.github.io/2020/06/14/operation-transform/)   
