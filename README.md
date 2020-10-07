@@ -8,6 +8,7 @@
 如果你访问不了我的博客，可以[来这里看](http://www.godbasin.com)哦~
 
 ### 最新     
+> [《前端监控体系搭建》](https://godbasin.github.io/2020/10/07/monitor-and-report/)   
 > [《前端这几年--10.我的工作历险记》](https://godbasin.github.io/2020/08/30/about-front-end-10/)   
 > [《前端这几年--9.提升工作效率》](https://godbasin.github.io/2020/08/30/about-front-end-9/)   
 > [《补齐Web前端性能分析的工具盲点》](https://godbasin.github.io/2020/08/29/front-end-performance-analyze/)   
@@ -19,9 +20,6 @@
 > [《谈谈依赖和解耦》](https://godbasin.github.io/2020/06/26/module-seperate/)   
 > [《大型前端项目要怎么跟踪和分析函数调用链》](https://godbasin.github.io/2020/06/21/trace-stash/)   
 > [《多人协作如何进行冲突处理》](https://godbasin.github.io/2020/06/14/operation-transform/)   
-> [《前端这几年--8.工作中的矛盾》](https://godbasin.github.io/2020/04/18/about-front-end-8/)   
-> [《小程序开发月刊第15期（20200415）》](https://godbasin.github.io/2020/04/15/wxapp-latest-20200415/)   
-> [《前端这几年--7.情绪与保持清醒》](https://godbasin.github.io/2020/04/05/about-front-end-7/)   
 
 ### 深入理解Vue.js实战  
 > [前言 前端框架的出现](https://godbasin.github.io/vue-ebook/vue-ebook/0.html)  
@@ -46,6 +44,7 @@
 > [后记 关于框架选型](https://godbasin.github.io/vue-ebook/vue-ebook/99.html)  
 
 ### 前端杂谈    
+> [《前端监控体系搭建》](https://godbasin.github.io/2020/10/07/monitor-and-report/)   
 > [《补齐Web前端性能分析的工具盲点》](https://godbasin.github.io/2020/08/29/front-end-performance-analyze/)   
 > [《在线文档的网络层设计思考》](https://godbasin.github.io/2020/08/23/online-doc-network/)   
 > [《VSCode 源码解读：IPC通信机制》](https://godbasin.github.io/2020/08/15/vscode-ipc/)   
@@ -72,6 +71,8 @@
 > [《前端这几年--6.工作选择的困惑》](https://godbasin.github.io/2020/03/29/about-front-end-6/)   
 > [《前端这几年--7.情绪与保持清醒》](https://godbasin.github.io/2020/04/05/about-front-end-7/)   
 > [《前端这几年--8.工作中的矛盾》](https://godbasin.github.io/2020/04/18/about-front-end-8/)   
+> [《前端这几年--9.提升工作效率》](https://godbasin.github.io/2020/08/30/about-front-end-9/)   
+> [《前端这几年--10.我的工作历险记》](https://godbasin.github.io/2020/08/30/about-front-end-10/)   
 > [《写文章这件事》](https://godbasin.github.io/2019/03/10/work-2-article/)   
 > [《选择这件事》](https://godbasin.github.io/2018/12/16/work-1-choice/)   
 
