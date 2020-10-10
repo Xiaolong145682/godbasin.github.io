@@ -8,6 +8,7 @@
 如果你访问不了我的博客，可以[来这里看](http://www.godbasin.com)哦~
 
 ### 最新     
+> [《在线Excel项目到底有多刺激》](https://godbasin.github.io/2020/10/10/why-spreadsheet-app-excited/)   
 > [《前端监控体系搭建》](https://godbasin.github.io/2020/10/07/monitor-and-report/)   
 > [《前端这几年--10.我的工作历险记》](https://godbasin.github.io/2020/08/30/about-front-end-10/)   
 > [《前端这几年--9.提升工作效率》](https://godbasin.github.io/2020/08/30/about-front-end-9/)   
