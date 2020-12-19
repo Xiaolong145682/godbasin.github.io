@@ -8,7 +8,8 @@
 如果你访问不了我的博客，可以[来这里看](http://www.godbasin.com)哦~
 
 ### 最新     
-> [《如何设计一个任务管理器》](https://godbasin.github.io2020/11/01/task-runner-design/)   
+> [《前端知识库--1.掌握浏览器的加载和渲染流程》](https://godbasin.github.io/2020/12/19/how-browser-works/)   
+> [《如何设计一个任务管理器》](https://godbasin.github.io/2020/11/01/task-runner-design/)   
 > [《在线Excel项目到底有多刺激》](https://godbasin.github.io/2020/10/10/why-spreadsheet-app-excited/)   
 > [《前端监控体系搭建》](https://godbasin.github.io/2020/10/07/monitor-and-report/)   
 > [《前端这几年--10.我的工作历险记》](https://godbasin.github.io/2020/08/30/about-front-end-10/)   
@@ -45,7 +46,11 @@
 > [第16章 关于 Vue 3.0](https://godbasin.github.io/vue-ebook/vue-ebook/16.html)  
 > [后记 关于框架选型](https://godbasin.github.io/vue-ebook/vue-ebook/99.html)  
 
+### 前端知识库
+> [《前端知识库--1.掌握浏览器的加载和渲染流程》](https://godbasin.github.io/2020/12/19/how-browser-works/)   
+
 ### 前端杂谈    
+> [《如何设计一个任务管理器》](https://godbasin.github.io/2020/11/01/task-runner-design/)   
 > [《前端监控体系搭建》](https://godbasin.github.io/2020/10/07/monitor-and-report/)   
 > [《补齐Web前端性能分析的工具盲点》](https://godbasin.github.io/2020/08/29/front-end-performance-analyze/)   
 > [《在线文档的网络层设计思考》](https://godbasin.github.io/2020/08/23/online-doc-network/)   
